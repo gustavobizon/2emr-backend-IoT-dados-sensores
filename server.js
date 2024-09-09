@@ -99,6 +99,10 @@ const authenticateJWT = (req, res, next) => {
 
 // Rota para buscar todos os dados dos sensores (protegida por JWT)
 app.get('/dados-sensores', authenticateJWT, (req, res) => {
+    if (isServicePaused) {
+        return res.status(200).json({ message: 'O serviço está pausado. Nenhum dado será enviado.' });
+    }
+
     const query = `SELECT * FROM dados_sensores`;
 
     db.all(query, [], (err, rows) => {
@@ -111,7 +115,6 @@ app.get('/dados-sensores', authenticateJWT, (req, res) => {
     });
 });
 
-// Rota para inserir dados dos sensores
 app.post('/dados-sensores', (req, res) => {
     const dados = req.body;
     console.log('Dados recebidos dos sensores:', dados);
@@ -142,6 +145,25 @@ app.delete('/limpar-dados', authenticateJWT, (req, res) => {
             res.send('Dados da tabela foram limpos com sucesso.');
         }
     });
+});
+
+let isServicePaused = false; // Flag para controlar o estado do serviço
+
+// Rota para pausar/reiniciar o serviço
+app.post('/pausar-servico', authenticateJWT, (req, res) => {
+    const { status } = req.body;
+
+    if (status === 'pausar') {
+        isServicePaused = true;
+        console.log('Serviço pausado.');
+        res.json({ message: 'Serviço pausado com sucesso.' });
+    } else if (status === 'reiniciar') {
+        isServicePaused = false;
+        console.log('Serviço reiniciado.');
+        res.json({ message: 'Serviço reiniciado com sucesso.' });
+    } else {
+        res.status(400).json({ message: 'Status inválido.' });
+    }
 });
 
 app.listen(PORT, () => {
