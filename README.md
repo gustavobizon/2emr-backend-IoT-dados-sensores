@@ -1,5 +1,7 @@
+💥Explicação do back💥
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-> Bibliotecas que estamos utilizando:
+
+➡ Bibliotecas que estamos utilizando:
 - **Express**: Utilizado para facilitar a criação do aplicativo web.
 - **SQLite3**: Utilizado para o banco de dados.
 - **Bcrypt**: Uma biblioteca para hash de senhas, ajudando a proteger senhas armazenadas no banco de dados.
@@ -7,7 +9,7 @@
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-> O código para fazer a conexão entre o backend e o frontend pelo http:
+➡ O código para fazer a conexão entre o backend e o frontend pelo http:
 
 	const server = http.createServer(app);
 	const io = new Server(server, {
@@ -18,7 +20,7 @@
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-> Rota para a criação do banco de dados:
+➡ Rota para a criação do banco de dados:
 
 	// Banco de dados e rotas (o restante do código permanece o mesmo)
 	const db = new sqlite3.Database('banco-de-dados.db');
@@ -40,7 +42,7 @@
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-> Rota para buscar dados dos sensores:
+➡ Rota para buscar dados dos sensores:
 
 	// Rota para buscar todos os dados dos sensores (protegida por JWT)
 	app.get('/dados-sensores', authenticateJWT, (req, res) => {
@@ -55,7 +57,7 @@
 	    });
 	});
 
-> Rota para buscar dados dos sensores com tempo:
+➡ Rota para buscar dados dos sensores com tempo:
 
 	app.get('/dados-sensores/tempo', authenticateJWT, (req, res) => {
 	    const { inicio, fim } = req.query; // Espera que os parâmetros sejam passados na URL
@@ -75,7 +77,7 @@
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-> Rota para inserir dados nos sensores:
+➡ Rota para inserir dados nos sensores:
 
 	app.post('/dados-sensores', async (req, res) => {
 	    const dados = req.body;
@@ -89,7 +91,7 @@
 	    }
 	});
 
- > Função para inserir dados e ativar evento:
+ ➡ Função para inserir dados e ativar evento:
 
 	async function addSensorData(newData) {
 	    // Insira no banco de dados
@@ -109,7 +111,7 @@
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-> Rota para limpar os dados na tabela:
+➡ Rota para limpar os dados na tabela:
 
 	// Rota para limpar todos os dados da tabela (protegida por JWT)
 	app.delete('/limpar-dados', authenticateJWT, (req, res) => {
