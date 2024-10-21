@@ -131,6 +131,6 @@
 
 💥Rodando a aplicação💥
  
- ➡ para rodar a aplicação é necessário abrir o terminal utilizando o "Ctrl" + "j", escrever "npm install" no terminal e depois escrever "npm start"
+ ➡ para rodar a aplicação é necessário fazer o fork desse repositório, baixar ele e abrir o arquivo no Vscode, depois abrir o terminal utilizando o "Ctrl" + "j", escrever "npm install" no terminal e depois escrever "npm start"
  
  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
