@@ -132,4 +132,4 @@
 💥Rodando a aplicação💥
  
  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
- ➡ para rodar a aplicação é necessário abrir o terminal utilizando o "Ctrl" + "j", escrever "npm install" no terminal e depois escrever "npm run"
+ ➡ para rodar a aplicação é necessário abrir o terminal utilizando o "Ctrl" + "j", escrever "npm install" no terminal e depois escrever "npm start"
