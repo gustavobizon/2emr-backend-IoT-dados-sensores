@@ -1,16 +1,9 @@
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-> Primeiro são importadas as bibliotecas utilizando:
-
-	const express = require('express');
-	const sqlite3 = require('sqlite3').verbose();
-	const bcrypt = require('bcrypt');
-	const jwt = require('jsonwebtoken');
-	const cors = require('cors');
-	const http = require('http'); // Importa o módulo http
-	const { Server } = require('socket.io'); // Importa o Socket.IO
-	const app = express();
-	const PORT = 3000;
-	const SECRET_KEY = 'sua_chave_secreta';
+> Bibliotecas que estamos utilizando:
+Express: utilizado para facilidar a criação do aplicativo web
+Squlite3: Utilizado para o banco de dados
+Bcrypt: Uma biblioteca para hash de senhas, ajudando a proteger senhas armazenadas no banco de dados
+JSON Web Token (JWT): Uma biblioteca para criar e verificar tokens que permitem a autenticação e autorização em aplicações web
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
