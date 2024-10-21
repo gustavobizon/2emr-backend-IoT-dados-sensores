@@ -1,9 +1,9 @@
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 > Bibliotecas que estamos utilizando:
-Express: utilizado para facilidar a criação do aplicativo web
-Squlite3: Utilizado para o banco de dados
-Bcrypt: Uma biblioteca para hash de senhas, ajudando a proteger senhas armazenadas no banco de dados
-JSON Web Token (JWT): Uma biblioteca para criar e verificar tokens que permitem a autenticação e autorização em aplicações web
+- **Express**: Utilizado para facilitar a criação do aplicativo web.
+- **SQLite3**: Utilizado para o banco de dados.
+- **Bcrypt**: Uma biblioteca para hash de senhas, ajudando a proteger senhas armazenadas no banco de dados.
+- **JSON Web Token (JWT)**: Uma biblioteca para criar e verificar tokens que permitem a autenticação e autorização em aplicações web.
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
